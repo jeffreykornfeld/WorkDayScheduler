@@ -23,6 +23,7 @@
   </head>
 
   <body>
+    
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
@@ -30,31 +31,110 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
-      <div class = 'calendar-container'>
-        <h2 class = 'date'></h2>
-        <div class = 'calendar'>
-      </div>
-    </div>
+      
+        <div class="row time-block" scheduleHour = "9">
+          <div id="hour-9" class="col-2  hour">
+            9AM
+          </div>
+          <textArea id="nine" class="col-9 textArea"></textArea>
+          <button value="nine" class="col-1 saveBtn">
+            <i class="fa fa-save"></i>
+          </button>
+        </div>
+
+
+        <div class="row time-block" scheduleHour = "10">
+          <div id="hour-10" class="col-2  hour">
+            10AM
+          </div>
+          <textArea id="ten" class="col-9 textArea"></textArea>
+          <button value="ten" class="col-1 saveBtn">
+            <i class="fa fa-save"></i>
+          </button>
+        </div>
+
+ 
+        <div class="row time-block" scheduleHour = "11">
+          <div id="hour-11" class="col-2  hour">
+            11AM
+          </div>
+          <textArea id="eleven" class="col-9 textArea"></textArea>
+          <button value="eleven" class="col-1 saveBtn">
+            <i class="fa fa-save"></i>
+          </button>
+        </div>
+
+
+        <div class="row time-block" scheduleHour = "12">
+          <div id="hour-12" class="col-2 hour">
+            12PM
+          </div>
+          <textArea id="twelve" class="col-9 textArea"></textArea>
+          <button value="twelve" class="col-1 saveBtn">
+            <i class="fa fa-save"></i>
+          </button>
+        </div>
+
+
+        <div class="row time-block" scheduleHour = "13">
+          <div id="hour-13" class="col-2 hour">
+            1PM
+          </div>
+          <textArea id="thirteen" class="col-9 textArea"></textArea>
+          <button value="thirteen" class="col-1 saveBtn">
+            <i class="fa fa-save"></i>
+          </button>
+        </div>
+
+
+        <div class="row time-block" scheduleHour = "14">
+          <div id="hour-14" class="col-2 hour">
+            2PM
+          </div>
+          <textArea id="fourteen" class="col-9 textArea"></textArea>
+          <button value="fourteen" class="col-1 saveBtn">
+            <i class="fa fa-save"></i>
+          </button>
+        </div>
+
+
+        <div class="row time-block" scheduleHour = "15">
+          <div id="hour-15" class="col-2 hour">
+            3PM
+          </div>
+          <textArea id="fifteen" class="col-9 textArea"></textArea>
+          <button value="fifteen" class="col-1 saveBtn">
+            <i class="fa fa-save"></i>
+          </button>
+        </div>
+
+
+        <div class="row time-block" scheduleHour = "16">
+          <div id="hour-16" class="col-2 hour">
+            4PM
+          </div>
+          <textArea id="sixteen" class="col-9 textArea"></textArea>
+          <button value="sixteen" class="col-1 saveBtn">
+            <i class="fa fa-save"></i>
+          </button>
+        </div>
+
+    
+        <div class="row time-block" scheduleHour = "17">
+          <div id="hour-17" class="col-2 hour">
+            5PM
+          </div>
+          <textArea id="seventeen" class="col-9 textArea"></textArea>
+          <button value="seventeen" class="col-1 saveBtn">
+            <i class="fa fa-save"></i>
+          </button>
+        </div>
+
+    
+    
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-  //shows today's date
-  let d = new Date()
-  let year = d.getFullYear()
-  let month = d.getMonth()+1;
-  let day = d.getDate()
-  let totalDays = new Date(year, month, 0).getDate()
-  let output = 
-  (month<10 ? '0' : '') + month + '/' +
-  (day<10 ? '0' : '') + day + '/' + year
-
-  $('.date').text(`${output}`)
-</script>
-
-
-
-
+    <script src="script.js"></script>  
     
   </body>
 </html>
