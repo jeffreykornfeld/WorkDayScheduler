@@ -3,7 +3,7 @@ $("#currentDay").text(moment().format("ddd MMMM Do"));
 
 var currentHour = moment().format("H");
 //holds values from localstorage
-var toDoList = {
+var toDoList =  JSON.parse(localStorage.getItem("toDoList"))|| {
   nine: "",
   ten: "",
   eleven: "",
@@ -15,7 +15,6 @@ var toDoList = {
   seventeen: ""
 };
 
-// console.log($(".time-block"))
 
 //get value of each row's hour
 $(".time-block").each(function(){
@@ -34,19 +33,20 @@ $(".time-block").each(function(){
     thisRow.addClass("future");
   }
 });
-function getSchedule(){
 
-}
+//textContent for values
+document.getElementById("nine").textContent = toDoList.nine
+document.getElementById("ten").textContent = toDoList.ten
+document.getElementById("eleven").textContent = toDoList.eleven
+document.getElementById("twelve").textContent = toDoList.twelve
+document.getElementById("thirteen").textContent = toDoList.thirteen
+document.getElementById("fourteen").textContent = toDoList.fourteen
+document.getElementById("fifteen").textContent = toDoList.fifteen
+document.getElementById("sixteen").textContent = toDoList.sixteen
+document.getElementById("seventeen").textContent = toDoList.seventeen
 
-$(document).ready(function(){
-toDoList = localStorage.getItem("toDoList", JSON.stringify(toDoList));
-getSchedule()
-
-});
-
+//button saves values to localstorage
 $("button").click(function(e){
-  // all buttons and text areas need ids and 
-  // values that match the keys names of the todolist variable
   console.log("e.target.value", e.target.value)
   var hour = e.target.value
   var task = document.getElementById(hour).value
