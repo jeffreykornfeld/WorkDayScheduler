@@ -1,7 +1,16 @@
-## Workday Scheduler
+# Workday Scheduler
 
-this workday scheduler allows you to add tasks to an hourly block and save as needed
+## Description
 
-each row will change color depending on the hour
+Hourly workday scheduler created with the Moment.js library.
 
-tasks are saved to localStorage and will remain upon refresh
+The current date is displayed at the top of the page. 
+The timeblocks are color coded to indicate past (grey), present (red), or future (green) hours.
+The user can click on a timeblock to enter an event.
+When the user clicks n the save button, that event is saved to local storage. The events will be displayed even after a page refresh. 
+
+![](05-third-party-apis-homework-demo.gif)
+
+## Contact
+
+[jeffreykornfeld] jakornfeld@yahoo.com
